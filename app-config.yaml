@@ -64,13 +64,12 @@ techdocs:
 
 auth:
   # see https://backstage.io/docs/auth/ to learn about auth providers
-  providers: {
-    google:
+  environment: development
+  providers:
+    github:
       development:
-        clientId: ${AUTH_GOOGLE_CLIENT_ID}
-        clientSecret: ${AUTH_GOOGLE_CLIENT_SECRET}
-
-  }
+        clientId: 4d62dba717ba17c734b0
+        clientSecret: 45b1f7ab235bef997ee4249d0e80a1744288a9a8
 
 scaffolder:
   # see https://backstage.io/docs/features/software-templates/configuration for software template options

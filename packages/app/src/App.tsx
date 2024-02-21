@@ -33,6 +33,9 @@ import { AppRouter, FlatRoutes } from '@backstage/core-app-api';
 import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
+import Inicio from './components/pages/inicio/Inicio.component';
+import Roles from './components/pages/roles/roles.component';
+import Proyecto from './components/pages/proyecto/proyecto.component';
 
 const app = createApp({
   apis,
@@ -57,6 +60,10 @@ const app = createApp({
 
 const routes = (
   <FlatRoutes>
+    <Route path="/inicio" element={<Inicio />} />
+    <Route path="/roles" element={<Roles />} />
+    <Route path="/proyecto" element={<Proyecto />} />
+    
     <Route path="/" element={<Navigate to="catalog" />} />
     <Route path="/catalog" element={<CatalogIndexPage />} />
     <Route
@@ -70,9 +77,6 @@ const routes = (
       path="/docs/:namespace/:kind/:name/*"
       element={<TechDocsReaderPage />}
     >
-      <TechDocsAddons>
-        <ReportIssue />
-      </TechDocsAddons>
     </Route>
     <Route path="/create" element={<ScaffolderPage />} />
     <Route path="/api-docs" element={<ApiExplorerPage />} />
