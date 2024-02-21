@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Backstage
+  annotations:
+    github.com/project-slug: JuanluAC/Backstage2
+spec:
+  type: other
+  lifecycle: unknown
+  owner: JuanluAC
