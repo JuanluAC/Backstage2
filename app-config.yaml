@@ -42,6 +42,10 @@ integrations:
     # - host: ghe.example.net
     #   apiBaseUrl: https://ghe.example.net/api/v3
     #   token: ${GHE_TOKEN}
+  
+  azure:
+    - host: dev.azure.com
+      token: ${AZURE_TOKEN}
 
 proxy:
   ### Example for how to add a proxy endpoint for the frontend.
@@ -73,6 +77,11 @@ auth:
 
 scaffolder:
   # see https://backstage.io/docs/features/software-templates/configuration for software template options
+  github:
+    token: ${GITHUB_TOKEN}
+    visibility: public
+  azure:
+    visibility: public
 
 catalog:
   import:
