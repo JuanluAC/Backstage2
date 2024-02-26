@@ -82,7 +82,7 @@ const Header = () => {
                     <nav className={styles.nadvar}>
                         <NavLink
                             className={`${styles.nadvarItem} ${styles.nadvarItemHover}`}
-                            exact to="/inicop">
+                            exact to="/inicio">
                             Inicio
                         </NavLink>
                         <NavLink

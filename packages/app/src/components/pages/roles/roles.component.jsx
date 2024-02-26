@@ -15,13 +15,18 @@ const useStyles = makeStyles({
     indice: {
         marginLeft: 'auto',
         marginTop: '40px',
-        width: '200px',
         padding: '20px',
         borderRadius: '5px',
         marginRight: '200px',
         boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
         listStyle: 'none',
 
+    },
+    listadoRoles: {
+        listStyle: 'none',
+        marginBottom: '10px',
+        marginLeft: '-34px',
+        listStyleType: 'none'
     },
     tiempoLectura: {
         width: 'max-content'
@@ -60,10 +65,10 @@ function Roles() {
                                 <p>🕓 Tiempo estimado de lectura: 12 minutos</p>
                             </div>
                         </div>
-                        <div style={{ marginLeft: 'auto' }}>
+                        <div style={{ marginLeft: 'auto', display: 'contents' }}>
                             <div className={styles.indice}>
-                                <ul style={{ listStyle: 'none', marginBottom: '10px' }}>
-                                    <li> Role </li>
+                                <ul className={styles.listadoRoles}>
+                                    <li style={{ backgroundColor: 'grey' }}> Roles </li>
                                     <li> Planner </li>
                                     <li> Responsable </li>
                                     <li> Sponsor </li>
